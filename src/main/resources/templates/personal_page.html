@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Arbeitszeit Erfassung</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+</head>
+<body class="zeit">
+
+<div class="center-content">
+    <p id="dateDisplay" style="font-weight: bold;">Datum: </p>
+    <div id="buttonContainer">
+        <button id="arbeitButton" onclick="TimerService.toggleArbeit()">Arbeit aufnehmen</button>
+
+        <button id="pauseButton" onclick="TimerService.togglePause()">Pause starten</button>
+    </div>
+    <div id="timerContainer">
+        <p>Arbeitszeit: <span id="arbeitszeit">00:00:00</span></p>
+        <p>Pausenzeit: <span id="pausenzeit">00:00:00</span></p>
+    </div>
+    <button id="resetButton" onclick="TimerService.resetTimers()">Reset</button>
+
+</div>
+
+<script src="/TimerService.js"></script>
+
+</body>
+</html>
